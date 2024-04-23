@@ -36,7 +36,7 @@
 
 ### Directory Information
 
-This is the working directory for the game which includes a `MAKEFILE` that can build the entire project utilizing the `COMPILE.G` file. (Beware: total of 13 splash bitmaps - slow compile times).
+The 'penguin' directory is the working directory for the game. It includes a `MAKEFILE` that can build the entire project utilizing the `COMPILE.G` file. (Beware: total of 13 splash bitmaps - slow compile times).
 
 ### Game Overview
 
