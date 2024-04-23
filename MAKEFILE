@@ -1,0 +1,75 @@
+penguin: penguin.o fsm.o bitmap.o splash1.o splash2.o splash3.o splash4.o splash5.o splash6.o splash7.o raster.o rast_asm.o model.o events.o random.o render.o psg.o music.o effects.o super.o isr.o isr_asm.o keyboard.o mouse.o
+	cc68x -g penguin.o fsm.o bitmap.o splash1.o splash2.o splash3.o splash4.o splash5.o splash6.o splash7.o raster.o rast_asm.o model.o events.o random.o render.o psg.o music.o effects.o super.o isr.o isr_asm.o keyboard.o mouse.o -o penguin
+
+penguin.o: penguin.c penguin.h
+	cc68x -g -c penguin.c
+
+fsm.o: fsm.c fsm.h
+	cc68x -g -c fsm.c
+
+bitmap.o: bitmap.c bitmap.h
+	cc68x -g -c bitmap.c
+
+splash1.o: splash1.c bitmap.h
+	cc68x -g -c splash1.c
+
+splash2.o: splash2.c bitmap.h
+	cc68x -g -c splash2.c
+
+splash3.o: splash3.c bitmap.h
+	cc68x -g -c splash3.c
+	
+splash4.o: splash4.c bitmap.h
+	cc68x -g -c splash4.c
+	
+splash5.o: splash5.c bitmap.h
+	cc68x -g -c splash5.c
+
+splash6.o: splash6.c bitmap.h
+	cc68x -g -c splash6.c
+
+splash7.o: splash7.c bitmap.h
+	cc68x -g -c splash7.c
+
+raster.o: raster.c raster.h
+	cc68x -g -c raster.c
+
+rast_asm.o: rast_asm.s
+	gen -D -L2 rast_asm.s
+
+model.o: model.c model.h
+	cc68x -g -c model.c
+	
+events.o: events.c events.h 
+	cc68x -g -c events.c
+	
+random.o: random.c random.h 
+	cc68x -g -c random.c
+
+render.o: render.c render.h
+	cc68x -g -c render.c
+
+psg.o: psg.c psg.h
+	cc68x -g -c psg.c
+
+music.o: music.c music.h
+	cc68x -g -c music.c
+
+effects.o: effects.c effects.h
+	cc68x -g -c effects.c
+	
+super.o: super.s 
+	gen -D -L2 super.s	
+
+isr.o: isr.c isr.h
+	cc68x -g -c isr.c
+	
+isr_asm.o: isr_asm.s
+	gen -D -L2 isr_asm.s
+
+keyboard.o: keyboard.c keyboard.h
+	cc68x -g -c keyboard.c
+
+mouse.o: mouse.c mouse.h
+	cc68x -g -c mouse.c
+	
